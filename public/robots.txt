@@ -1,4 +1,12 @@
+# robots.txt для ДОЛГИ63.РФ
+
+User-agent: *
+Allow: /
+
 User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
 Allow: /
 
 User-agent: Bingbot
@@ -10,5 +18,9 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Запрет на индексацию служебных файлов
+Disallow: /assets/
+Disallow: /*.json$
+
+# Время повторного обхода
+Crawl-delay: 5
