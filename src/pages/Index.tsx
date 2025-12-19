@@ -26,7 +26,7 @@ export default function Index() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("Formspree.io/slafka1996@gmail.com", {
+      const response = await fetch("https://formspree.io/f/xbdrlywl", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
