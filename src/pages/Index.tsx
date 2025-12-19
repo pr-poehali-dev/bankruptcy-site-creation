@@ -63,7 +63,7 @@ export default function Index() {
                 <Icon name="Scale" size={28} className="text-black" />
               </div>
               <span className="text-yellow-400 text-2xl font-bold tracking-tight">
-                ДОЛГИ63.РФ
+                ДОЛГИ63.РФ в лице ООО "КАПЕЛЛА"
               </span>
             </a>
             <nav className="hidden md:flex gap-6">
