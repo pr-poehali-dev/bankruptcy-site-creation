@@ -359,6 +359,15 @@ export default function Index() {
             </a>
           </div>
         </div>
+        <form action="https://formspree.io/f/xyyyyyyz" method="POST">
+<label>Ваше имя:</label><br>
+<input type="text" name="name" required><br><br>
+<label>Ваш email:</label><br>
+<input type="email" name="email" required><br><br>
+<label>Сообщение:</label><br>
+<textarea name="message" required></textarea><br><br>
+<button type="submit">Отправить</button><br>
+</form>
       </section>
 
       <footer className="bg-gray-900 text-white py-12 px-4 border-t border-yellow-500/20">
