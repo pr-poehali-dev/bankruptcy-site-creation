@@ -7,15 +7,23 @@ export default function About() {
     <div className="min-h-screen bg-white">
       <header className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-yellow-500/30">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
-              <Icon name="Scale" size={28} className="text-black" />
-            </div>
-            <span className="text-yellow-400 text-2xl font-bold tracking-tight">ДОЛГИ63.РФ</span>
-          </a>
+          <div className="flex items-center gap-6">
+            <a href="/" className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
+                <Icon name="Scale" size={28} className="text-black" />
+              </div>
+              <span className="text-yellow-400 text-2xl font-bold tracking-tight">ДОЛГИ63.РФ</span>
+            </a>
+            <nav className="hidden md:flex gap-6">
+              <a href="/" className="text-white hover:text-yellow-400 transition-colors font-medium">Главная</a>
+              <a href="/about" className="text-yellow-400 font-medium">О компании</a>
+              <a href="/faq" className="text-white hover:text-yellow-400 transition-colors font-medium">Вопросы и ответы</a>
+            </nav>
+          </div>
           <a href="tel:+79047298933" className="flex items-center gap-2 bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all hover:scale-105">
             <Icon name="Phone" size={20} />
-            <span>+7 904 729-89-33</span>
+            <span className="hidden sm:inline">+7 904 729-89-33</span>
+            <span className="sm:hidden">Позвонить</span>
           </a>
         </div>
       </header>
