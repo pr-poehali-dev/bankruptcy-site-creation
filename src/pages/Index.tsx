@@ -46,15 +46,15 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-white/10">
+      <header className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-yellow-500/30">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
               <Icon name="Scale" size={28} className="text-black" />
             </div>
-            <span className="text-white text-2xl font-bold tracking-tight">ДОЛГИ63.РФ</span>
+            <span className="text-yellow-400 text-2xl font-bold tracking-tight">ДОЛГИ63.РФ</span>
           </div>
-          <a href="tel:+79047298933" className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105">
+          <a href="tel:+79047298933" className="flex items-center gap-2 bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all hover:scale-105">
             <Icon name="Phone" size={20} />
             <span>+7 904 729-89-33</span>
           </a>
@@ -76,12 +76,12 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6 rounded-lg font-semibold"
+                className="bg-yellow-400 text-black hover:bg-yellow-300 text-lg px-8 py-6 rounded-lg font-semibold"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Получить консультацию
               </Button>
-              <a href="tel:+79047298933" className="text-lg text-white hover:text-gray-300 transition-colors flex items-center gap-2">
+              <a href="tel:+79047298933" className="text-lg text-yellow-400 hover:text-yellow-300 transition-colors flex items-center gap-2">
                 <Icon name="Phone" size={20} />
                 +7 904 729-89-33
               </a>
@@ -101,10 +101,10 @@ export default function Index() {
               { icon: 'Calendar', title: 'Просрочка 3+ месяца', desc: 'Невозможность платить по кредитам более 3 месяцев' },
               { icon: 'AlertTriangle', title: 'Давление коллекторов', desc: 'Постоянные звонки, угрозы, испорченная кредитная история' }
             ].map((item, i) => (
-              <Card key={i} className="border-2 border-black hover:shadow-2xl transition-all duration-300 animate-scale-in hover:scale-105" style={{ animationDelay: `${i * 0.1}s` }}>
+              <Card key={i} className="border-2 border-yellow-400 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 animate-scale-in hover:scale-105" style={{ animationDelay: `${i * 0.1}s` }}>
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon name={item.icon} size={32} className="text-white" />
+                  <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon name={item.icon} size={32} className="text-black" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
@@ -150,8 +150,8 @@ export default function Index() {
                 a: 'Да, работать можно и нужно. Есть ограничения только на руководящие должности в некоторых организациях.'
               }
             ].map((item, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="bg-white border-2 border-black rounded-lg px-6">
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+              <AccordionItem key={i} value={`item-${i}`} className="bg-white border-2 border-yellow-400 rounded-lg px-6 hover:border-yellow-500 transition-colors">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 hover:text-yellow-600">
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 text-base pb-6">
@@ -192,11 +192,11 @@ export default function Index() {
                 rating: 5
               }
             ].map((review, i) => (
-              <Card key={i} className="border-2 border-gray-200 hover:border-black transition-all duration-300 animate-fade-in hover:shadow-xl" style={{ animationDelay: `${i * 0.15}s` }}>
+              <Card key={i} className="border-2 border-yellow-400 hover:border-yellow-500 transition-all duration-300 animate-fade-in hover:shadow-xl hover:shadow-yellow-400/20" style={{ animationDelay: `${i * 0.15}s` }}>
                 <CardContent className="p-8">
                   <div className="flex gap-1 mb-4">
                     {[...Array(review.rating)].map((_, j) => (
-                      <Icon key={j} name="Star" size={20} className="fill-black text-black" />
+                      <Icon key={j} name="Star" size={20} className="fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                   <p className="text-gray-700 mb-4 leading-relaxed">"{review.text}"</p>
@@ -211,7 +211,8 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-black text-white">
+      <section id="contact" className="py-20 px-4 bg-black text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent"></div>
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             Свяжитесь с нами
@@ -219,14 +220,14 @@ export default function Index() {
           <p className="text-center text-gray-300 mb-12 text-lg">
             Бесплатная консультация по вашей ситуации
           </p>
-          <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
+          <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in relative z-10">
             <div>
               <Input
                 placeholder="Ваше имя"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 h-14 text-lg"
+                className="bg-white/10 border-yellow-400/30 text-white placeholder:text-gray-400 h-14 text-lg focus:border-yellow-400"
               />
             </div>
             <div>
@@ -236,7 +237,7 @@ export default function Index() {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 required
-                className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 h-14 text-lg"
+                className="bg-white/10 border-yellow-400/30 text-white placeholder:text-gray-400 h-14 text-lg focus:border-yellow-400"
               />
             </div>
             <div>
@@ -246,14 +247,14 @@ export default function Index() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows={5}
-                className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-lg"
+                className="bg-white/10 border-yellow-400/30 text-white placeholder:text-gray-400 text-lg focus:border-yellow-400"
               />
             </div>
             <Button 
               type="submit" 
               size="lg" 
               disabled={isSubmitting}
-              className="w-full bg-white text-black hover:bg-gray-100 text-lg py-6 font-semibold"
+              className="w-full bg-yellow-400 text-black hover:bg-yellow-300 text-lg py-6 font-semibold"
             >
               {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
             </Button>
@@ -261,9 +262,9 @@ export default function Index() {
               Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
             </p>
           </form>
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center relative z-10">
             <p className="text-gray-400 mb-4">Или позвоните прямо сейчас:</p>
-            <a href="tel:+79047298933" className="text-3xl font-bold hover:text-gray-300 transition-colors inline-flex items-center gap-3">
+            <a href="tel:+79047298933" className="text-3xl font-bold text-yellow-400 hover:text-yellow-300 transition-colors inline-flex items-center gap-3">
               <Icon name="Phone" size={32} />
               +7 904 729-89-33
             </a>
@@ -271,15 +272,15 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12 px-4 border-t border-white/10">
+      <footer className="bg-gray-900 text-white py-12 px-4 border-t border-yellow-500/20">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
                   <Icon name="Scale" size={24} className="text-black" />
                 </div>
-                <span className="text-xl font-bold">ДОЛГИ63.РФ</span>
+                <span className="text-xl font-bold text-yellow-400">ДОЛГИ63.РФ</span>
               </div>
               <p className="text-gray-400">
                 Профессиональная помощь в банкротстве физических лиц
@@ -288,11 +289,11 @@ export default function Index() {
             <div>
               <h3 className="font-bold mb-4 text-lg">Контакты</h3>
               <div className="space-y-2 text-gray-400">
-                <a href="tel:+79047298933" className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href="tel:+79047298933" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                   <Icon name="Phone" size={18} />
                   +7 904 729-89-33
                 </a>
-                <a href="mailto:slafka1996@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href="mailto:slafka1996@gmail.com" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                   <Icon name="Mail" size={18} />
                   slafka1996@gmail.com
                 </a>
@@ -306,7 +307,7 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+          <div className="border-t border-yellow-500/20 pt-8 text-center text-gray-400 text-sm">
             <p>© 2024 ДОЛГИ63.РФ. Все права защищены.</p>
           </div>
         </div>
