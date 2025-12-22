@@ -142,7 +142,7 @@ export default function Index() {
             {[
               {
                 icon: "TrendingDown",
-                title: "Долги свыше 500 000 ₽",
+                title: "Долги свыше 150 000 ₽",
                 desc: "Сумма задолженности превышает полмиллиона рублей",
               },
               {
