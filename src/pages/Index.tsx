@@ -142,7 +142,7 @@ export default function Index() {
             {[
               {
                 icon: "TrendingDown",
-                title: "Долги свыше 150 000 ₽",
+                title: "Долги свыше 250 000 ₽",
                 desc: "Сумма задолженности превышает полмиллиона рублей",
               },
               {
@@ -316,6 +316,18 @@ export default function Index() {
               <Input
                 type="tel"
                 placeholder="Телефон"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
+                required
+                className="bg-white/10 border-yellow-400/30 text-white placeholder:text-gray-400 h-14 text-lg focus:border-yellow-400"
+              />
+            </div>
+            <div>
+              <Input
+                type="tel"
+                placeholder="Город"
                 value={formData.phone}
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
